@@ -1,0 +1,24 @@
+.style1{
+    text-align: center;
+    color: rgb(127, 229, 255);
+    font-style: italic;
+}
+p{
+    border: 2px aqua solid;
+    border-radius: 25px;
+    width: 85%;
+    margin: 70px 50px 50px 50px;
+    padding: 20px;
+    background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?w=900&t=st=1708321752~exp=1708322352~hmac=9bef4ed449368ff0a0054481c17bc677bf3ec39cfc157210d366913546ea5fe2");
+    color: black
+}
+
+li{
+    list-style-type: upper-roman;
+}
+
+img{
+    width: 700px;
+    height: 700px;
+    border-radius: 25px;
+}
