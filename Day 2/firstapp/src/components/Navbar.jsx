@@ -11,36 +11,44 @@ const Navbar = () => {
                 <br /><br /><br />
                 <Typography sx={{flexGrow:1}} align='left' variant='h6'>App</Typography>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/'>Login</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/'>Login</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/count'>Counter</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/count'>Counter</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/sign'>SignUP</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/sign'>SignUP</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/use'>Useeffect</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/use'>Useeffect</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/state'>StateBasics</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/state'>StateBasics</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/map'>Mapping</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/map'>Mapping</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/list'>List</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/list'>List</Link>
                 </Button>
                 &nbsp;
-                <Button variant='contained' style={{color:'white'}} color='inherit'>
-                    <Link style={{color:'blue'}} to='/api'>API</Link>
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/api'>API</Link>
+                </Button>
+                &nbsp;
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/grid'>Grid</Link>
+                </Button>
+                &nbsp;
+                <Button variant='outlined' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'white'}} to='/card'>Card</Link>
                 </Button>
 
                 

@@ -10,6 +10,8 @@ import { Route, Routes } from 'react-router-dom';
 import Mapping from './components/Mapping';
 import Listcreate from './components/Listcreate';
 import Apiadd from './components/Apiadd';
+import Gridget from './components/Gridget';
+import Cards from './components/Cards';
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
         <Route path='/map' element={<Mapping/>}/>
         <Route path='/list' element={<Listcreate/>}/>
         <Route path='/api' element={<Apiadd/>}/>
+        <Route path='/grid' element={<Gridget/>}/>
+        <Route path='/card' element={<Cards/>}/>
+
         
       </Routes>
       {/* <Useeffect/> */}
