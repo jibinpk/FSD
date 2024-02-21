@@ -7,6 +7,9 @@ import Counter from './components/Counter';
 import Signup from './components/Signup';
 import Useeffect from './components/Useeffect';
 import { Route, Routes } from 'react-router-dom';
+import Mapping from './components/Mapping';
+import Listcreate from './components/Listcreate';
+import Apiadd from './components/Apiadd';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path='/count' element={<Counter/>}/>
         <Route path='/state' element={<StateBasics/>}/>
         <Route path='/use' element={<Useeffect/>}/>
+        <Route path='/map' element={<Mapping/>}/>
+        <Route path='/list' element={<Listcreate/>}/>
+        <Route path='/api' element={<Apiadd/>}/>
         
       </Routes>
       {/* <Useeffect/> */}

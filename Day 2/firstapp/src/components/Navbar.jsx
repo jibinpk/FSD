@@ -30,6 +30,18 @@ const Navbar = () => {
                 <Button variant='contained' style={{color:'white'}} color='inherit'>
                     <Link style={{color:'blue'}} to='/state'>StateBasics</Link>
                 </Button>
+                &nbsp;
+                <Button variant='contained' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'blue'}} to='/map'>Mapping</Link>
+                </Button>
+                &nbsp;
+                <Button variant='contained' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'blue'}} to='/list'>List</Link>
+                </Button>
+                &nbsp;
+                <Button variant='contained' style={{color:'white'}} color='inherit'>
+                    <Link style={{color:'blue'}} to='/api'>API</Link>
+                </Button>
 
                 
             </Toolbar>
