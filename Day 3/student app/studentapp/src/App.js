@@ -1,19 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './contents/Navbar';
-import { Route, Routes } from 'react-router-dom';
-import Home from './contents/Homepage';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homes from './components/Homes';
+import Detailspage from './components/Detailspage';
 
 function App() {
   return (
     <div className="App">
+      
       <Navbar/>
-      <Homepage/>
-      {/* <Routes>
-        <Route to='/' element={<Home/>}/>
-      </Routes> */}
+      <Routes>
+        <Route path='/' element={<Homes/>}/>
+        <Route path='/det' element={<Detailspage/>}/>
+
+        
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
