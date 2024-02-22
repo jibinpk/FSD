@@ -1,4 +1,5 @@
 import { Button, TextField } from '@mui/material'
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 const Homes = () => {
@@ -11,7 +12,16 @@ const Homes = () => {
   };
   const submitHandler = ()=>{
     console.log("entered");
-    setStu([...stu,datas]); 
+    setStu([...stu,{...datas}]); 
+    axios
+      .post("http://localhost:4000/students",{
+      name: datas.name,
+      age: datas.age,
+      department: datas.department,
+  })
+  .catch(() => {
+    alert("Error in data");
+  });
   };
   useEffect (() => {
     console.log(stu);
