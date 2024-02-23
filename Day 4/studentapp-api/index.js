@@ -33,9 +33,30 @@ app.get("/people",(req,res) => {
     res.json([{name: "Jibin",role:"Student"},{name: "Taylor",role:"Singer"}]);
 });
 
-app.get("/students",(req,res)=> {
+app.get("/students/:id", async (req,res) => {
+    let id = req.params.id;
+    let data = await Students.findById(id).catch(err => {
+        res.json("Error finding student");
+    });
+    if(!data) {
+        res.json("Not Found");
+    }
+    else{
+        res.json(data);
+    }
+
+})
+
+
+
+app.get("/students", async (req,res)=> {
     console.log("students request received");
-    res.json([{name: "Jibin",age:"21",department:"cse"},{name:"Adam",age:"23",department:"ece"},{name:"Taylor",age:"21",department:"cse"}]);
+    let data = await Students.find().catch(err => {
+        res.json("Error loading data")
+    });
+    res.json(data);
+
+    // res.json([{name: "Jibin",age:"21",department:"cse"},{name:"Adam",age:"23",department:"ece"},{name:"Taylor",age:"21",department:"cse"}]);
 });
 
 app.post("/students",(req,res)=>{
