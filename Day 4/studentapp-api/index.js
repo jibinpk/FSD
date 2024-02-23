@@ -1,10 +1,22 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = new express();
 app.use(cors());
 app.use(bodyParser.json());
+
+
+let Students = require('./student.model');
+
+mongoose.connect("mongodb+srv://jibinpkkd:uAVbBwWwGDsh4Uh8@cluster0.wdwq5tn.mongodb.net/fsdprojects?retryWrites=true&w=majority&appName=Cluster0")
+
+const connection = mongoose.connection;
+
+connection.once("open",() => {
+    console.log("MongoDB connection established successfully");
+})
 
 app.get("/",(req,res) => {
     console.log("request received");
@@ -28,6 +40,15 @@ app.get("/students",(req,res)=> {
 
 app.post("/students",(req,res)=>{
     console.log(req.body);
+    let student = new Students(req.body);
+    student
+    .save()
+    .then(()=>{res.json("Saved successfully");
+    })
+    .catch(err=>{
+    res.json("Error: " + err);
+    });
+
 });
     
 app.listen("4000", () => {
