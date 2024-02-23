@@ -19,6 +19,9 @@ const Homes = () => {
       age: datas.age,
       department: datas.department,
   })
+  .then(()=>{
+    alert("Saved succesfuly");
+  })
   .catch(() => {
     alert("Error in data");
   });
