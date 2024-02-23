@@ -11,7 +11,7 @@ function App() {
       
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Homes/>}/>
+        <Route path='/' element={<Homes  method="post" data={{id:"",name:"",age:"",department:""}}/>}/>
         <Route path='/det' element={<Detailspage/>}/>
 
         

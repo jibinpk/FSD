@@ -2,9 +2,15 @@ import { Button, TextField } from '@mui/material'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-const Homes = () => {
+const Homes = (props) => {
   var [stu,setStu] = useState([]);
-  var [datas,setData] = useState([]);
+  var [datas,setData] = useState({
+    id: props.data.id,
+    name: props.data.name,
+    age: props.data.age,
+    department: props.data.department,
+
+});
   const inputHandler = (e) => {
     console.log("on");
     setData({...datas,[e.target.name]:e.target.value});
@@ -32,11 +38,11 @@ const Homes = () => {
   return (
     <div>
         <br /><br /><br />
-        <TextField variant='outlined' label='Name' name='names' onChange={inputHandler}></TextField>
+        <TextField variant='outlined' value={datas.name} label='Name' name='names' onChange={inputHandler}></TextField>
         <br /><br />
-        <TextField variant='outlined' label='Age' name='age' onChange={inputHandler}></TextField>
+        <TextField variant='outlined' value={datas.age} label='Age' name='age' onChange={inputHandler}></TextField>
         <br /><br />
-        <TextField variant='outlined' label='Department' name='department' onChange={inputHandler}></TextField>
+        <TextField variant='outlined' value={datas.department} label='Department' name='department' onChange={inputHandler}></TextField>
         <br /><br />
         <Button variant='outlined' label='submit' onClick={submitHandler}>submit</Button>
     </div>
