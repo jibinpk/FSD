@@ -15,7 +15,7 @@ const Homes = () => {
     setStu([...stu,{...datas}]); 
     axios
       .post("http://localhost:4000/students",{
-      name: datas.name,
+      name: datas.names,
       age: datas.age,
       department: datas.department,
   })

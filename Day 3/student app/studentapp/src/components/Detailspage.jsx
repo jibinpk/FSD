@@ -14,6 +14,7 @@ const Detailspage = () => {
    
   return (
     <div>
+        &nbsp;&nbsp;
         <Grid container spacing={2}>
             {students.map((val,i)=>{
                 return(
@@ -25,7 +26,7 @@ const Detailspage = () => {
                                 image="https://t4.ftcdn.net/jpg/05/91/40/47/360_F_591404733_XI6dw0OZMfxCsZLqzmY8BcWbzf2QwZdK.jpg"
                                 title={val.title}
                             />
-                            <hr />
+                            <hr style={{ borderTopStyle: 'solid', borderTopWidth: '2px', borderTopColor: 'black' }}/>
                             <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
                                 {val.name}
