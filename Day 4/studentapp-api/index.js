@@ -47,7 +47,20 @@ app.get("/students/:id", async (req,res) => {
 
 })
 
+app.delete("/students/:id", async (req,res) => {
+    let id = req.params.id;
+    let data = await Students.findByIdAndDelete(id)
+    .then(()=>{
 
+        res.json("Data removed Successfully");
+
+    })
+    .catch(() => {
+        res.json("Failed deleteing data");
+
+    });
+    
+});
 
 app.get("/students", async (req,res)=> {
     console.log("students request received");
